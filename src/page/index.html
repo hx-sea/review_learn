@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<ul id="ul">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	const ul = document.getElementById('ul');
+
+	ul.addEventListener('click', function (e) {
+		const target = e.target;
+		if (target.tagName.toLowerCase() === 'li') {
+			const liList = document.querySelectorAll('li');
+			// const index = Array.prototype.indexOf.call(liList, target);
+			const index = Array.from(liList).indexOf(target);
+
+			alert(target.innerHTML, index);
+		}
+	});
+</script>
+<style>
+	#ul {
+		background: gray;
+	}
+	li {
+		border: 1px solid red;
+		cursor: pointer;
+	}
+</style>

@@ -1,0 +1,15 @@
+{
+	"presets": ["@babel/preset-react","react-native-stage-0/decorator-support"],
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "antd",
+				"libraryDirectory": "lib",
+				"style": true
+			}
+		],
+		["@babel/plugin-proposal-decorators", { "legacy": true }],
+		"@babel/plugin-syntax-dynamic-import"
+	]
+}
